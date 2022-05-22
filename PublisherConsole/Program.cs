@@ -7,7 +7,8 @@ void GetFilteredData()
 {
     using var context = new PublisherContext();
 
-    var authors = context.Authors.Where(x => x.FirstName == "Ahmed").ToList();
+    var queryName = "Ahmed";
+    var authors = context.Authors.Where(x => x.FirstName == queryName).ToList();
 
     foreach (var author in authors)
     {
